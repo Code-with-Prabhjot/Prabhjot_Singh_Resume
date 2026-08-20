@@ -51,8 +51,8 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <motion.div 
             key={exp.id}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="relative pl-8 md:pl-12"

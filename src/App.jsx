@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Experience />
         <Projects />
         <Skills />
+        <Contact />
       </main>
 
       <footer className="py-8 text-center text-slate-500 text-sm border-t border-slate-800">

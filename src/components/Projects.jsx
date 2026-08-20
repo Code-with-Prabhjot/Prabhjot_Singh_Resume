@@ -10,24 +10,25 @@ const Projects = () => {
       title: 'AI Resume Analyser',
       tech: ['Python', 'Flask', 'spaCy', 'SQLite', 'JWT', 'Vercel'],
       description: 'Developed a live, NLP-driven screening platform that identifies exact candidate skill gaps across 1,700+ engineering terms. Implemented an intelligent OCR extraction pipeline accelerating batch processing speeds by 80%.',
-      github: '#',
-      live: '#'
+      github: 'https://github.com/Code-with-Prabhjot/resume-analyzer-backend',
+      live: 'https://resume-analyzer-frontend-gold.vercel.app/'
     },
     {
       id: 2,
       title: 'Nexus Event Registration Portal',
       tech: ['Node.js', 'Express', 'PostgreSQL', 'Prisma', 'TypeScript'],
       description: 'Built a full-stack, high-concurrency event registration SPA featuring distinct role-based access for students and gate volunteers. Designed a robust backend architecture resulting in seamless data processing during simulated 2,000 RPM traffic spikes.',
-      github: '#',
-      live: '#'
+      github: 'https://github.com/Code-with-Prabhjot/IEEE-TechFest-Backend',
+      live: 'https://nexus-backend-acmg.onrender.com/'
     },
     {
       id: 3,
       title: 'eConfMate',
       tech: ['React.js', 'JavaScript', 'HTML/CSS', 'Git'],
       description: 'Collaborated with a team to build and scale a comprehensive conference management platform utilized for university events. Designed and developed the frontend UI and branded PDF export templates to visualize multi-day schedules.',
-      github: '#',
-      live: '#'
+      github: null,
+      live: null,
+      isPrivate: true
     }
   ];
 
@@ -57,13 +58,21 @@ const Projects = () => {
           >
             <div className="flex justify-between items-center mb-6 text-slate-400 group-hover:text-[#06b6d4] transition-colors">
               <Folder size={40} className="text-[#06b6d4]" />
-              <div className="flex gap-4">
-                <a href={project.github} target="_blank" rel="noreferrer" className="hover:text-[#06b6d4] transition-colors" title="GitHub">
-                  <FaGithub size={22} />
-                </a>
-                <a href={project.live} target="_blank" rel="noreferrer" className="hover:text-[#06b6d4] transition-colors" title="Live Demo">
-                  <ExternalLink size={22} />
-                </a>
+              <div className="flex gap-4 items-center">
+                {project.isPrivate ? (
+                  <span className="px-3 py-1 bg-slate-800 border border-amber-500/50 text-amber-500 text-xs font-semibold rounded-full uppercase tracking-wider">
+                    In Beta / Private
+                  </span>
+                ) : (
+                  <>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="hover:text-[#06b6d4] transition-colors" title="GitHub">
+                      <FaGithub size={22} />
+                    </a>
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="hover:text-[#06b6d4] transition-colors" title="Live Demo">
+                      <ExternalLink size={22} />
+                    </a>
+                  </>
+                )}
               </div>
             </div>
 
