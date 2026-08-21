@@ -54,7 +54,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-slate-800/40 rounded-xl p-6 border border-slate-700 hover:border-[#06b6d4] hover:-translate-y-2 transition-all duration-300 flex flex-col h-full group"
+            className="bg-slate-800/40 backdrop-blur-md rounded-xl p-6 border border-slate-700 hover:border-[#06b6d4] hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(6,182,212,0.15)] transition-all duration-300 flex flex-col h-full group relative z-10"
           >
             <div className="flex justify-between items-center mb-6 text-slate-400 group-hover:text-[#06b6d4] transition-colors">
               <Folder size={40} className="text-[#06b6d4]" />
