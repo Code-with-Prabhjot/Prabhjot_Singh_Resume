@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Activity } from 'lucide-react';
+import { Activity, ExternalLink } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa6';
 
 const Metrics = () => {
   return (
@@ -30,12 +31,35 @@ const Metrics = () => {
             <Activity size={20} className="text-[#06b6d4]" />
             GitHub Activity
           </div>
-          <div className="w-full overflow-x-auto overflow-y-hidden pb-4 custom-scrollbar">
-            <img 
-              src="https://ghchart.rshah.org/06b6d4/Code-with-Prabhjot" 
-              alt="Prabhjot's GitHub Chart" 
-              className="min-w-[700px] h-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
-            />
+          <div className="flex flex-col gap-5 h-full justify-center pb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-[#0f172a]/50 p-4 rounded-lg border border-slate-700/50">
+                <p className="text-[#06b6d4] text-xs uppercase tracking-wider font-bold mb-1">Total Contributions</p>
+                <p className="text-[#f8fafc] font-semibold text-xl">120+ <span className="text-sm text-slate-400 font-normal">(Recent)</span></p>
+              </div>
+              <div className="bg-[#0f172a]/50 p-4 rounded-lg border border-slate-700/50">
+                <p className="text-[#06b6d4] text-xs uppercase tracking-wider font-bold mb-1">Current Focus</p>
+                <p className="text-[#f8fafc] font-semibold text-sm">Backend Systems & Data Structures</p>
+              </div>
+            </div>
+            
+            <div className="bg-[#0f172a]/50 p-4 rounded-lg border border-slate-700/50">
+              <p className="text-[#06b6d4] text-xs uppercase tracking-wider font-bold mb-1">Top Languages</p>
+              <p className="text-[#f8fafc] font-semibold">C++, Python, JavaScript</p>
+            </div>
+            
+            <div className="mt-2 pt-4 border-t border-slate-700/50 flex items-center justify-between">
+              <a 
+                href="https://github.com/Code-with-Prabhjot" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-slate-400 hover:text-[#06b6d4] transition-colors group/link"
+              >
+                <FaGithub size={18} className="group-hover/link:scale-110 transition-transform" />
+                <span className="text-sm font-medium tracking-wide">View Full Profile</span>
+                <ExternalLink size={14} className="ml-1" />
+              </a>
+            </div>
           </div>
         </motion.div>
 

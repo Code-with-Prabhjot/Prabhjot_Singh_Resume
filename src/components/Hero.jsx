@@ -107,22 +107,6 @@ const Hero = () => {
             </div>
           </motion.div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-col sm:flex-row items-center gap-2 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl px-5 py-3 text-sm md:text-base shadow-lg max-w-fit"
-          >
-            <Trophy size={20} className="text-amber-400 mb-1 sm:mb-0" />
-            <span className="text-slate-200 font-semibold tracking-wide text-center sm:text-left leading-tight">
-              430+ Problems Solved <span className="hidden sm:inline text-slate-500 mx-2">|</span> 
-              <br className="sm:hidden" />
-              <span className="text-[#06b6d4] sm:ml-0 ml-1">Top 1.2% (Beats 98.8%)</span> 
-              <span className="hidden sm:inline text-slate-500 mx-2">|</span>
-              <br className="sm:hidden" />
-              <span className="text-slate-400 text-xs sm:text-sm">Rank ~ 265,000</span>
-            </span>
-          </motion.div>
         </div>
 
         {/* Profile Image with Float */}
@@ -142,7 +126,7 @@ const Hero = () => {
             <img 
               src="/PRABHJOT.png" 
               alt="Prabhjot Singh" 
-              className="w-full h-full object-cover object-top relative z-0 transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full object-cover object-top scale-110 relative z-0 transition-transform duration-700 group-hover:scale-[1.15]"
             />
           </div>
         </motion.div>
