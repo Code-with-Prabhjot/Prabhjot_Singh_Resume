@@ -31,8 +31,10 @@ function App() {
           <Contact />
         </main>
 
-        <footer className="py-8 text-center text-slate-500 text-sm border-t border-slate-800">
-          <p>Built with React, Vite, and Tailwind CSS by Prabhjot Singh.</p>
+        <footer className="py-8 border-t border-slate-800">
+          <p className="text-slate-500 text-xs sm:text-sm text-center font-medium tracking-wide">
+            Designed &amp; Developed by Prabhjot Singh &bull; &copy; 2026
+          </p>
         </footer>
       </div>
     </div>

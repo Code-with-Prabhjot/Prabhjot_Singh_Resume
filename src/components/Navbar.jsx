@@ -27,8 +27,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#home" className="text-2xl font-bold tracking-tighter text-[#f8fafc] hover:text-[#06b6d4] transition-colors">
-              Prabhjot<span className="text-[#06b6d4]">.</span>
+            <a href="#home" className="text-2xl sm:text-3xl font-bold tracking-tighter text-slate-100 hover:text-[#06b6d4] transition-colors">
+              PS<span className="text-cyan-400">.</span>
             </a>
           </div>
           
