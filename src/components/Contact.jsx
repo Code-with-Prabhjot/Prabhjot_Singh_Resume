@@ -13,7 +13,7 @@ const Contact = () => {
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center gap-4">
-          <span className="text-[#06b6d4]">04.</span> What's Next?
+          <span className="text-[#06b6d4]">05.</span> What's Next?
         </h2>
         
         <h3 className="text-4xl md:text-5xl font-extrabold text-slate-200 mb-6">
