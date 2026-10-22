@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Trophy, Calendar } from 'lucide-react';
+import { Briefcase, Users, Code, Calendar } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -10,68 +10,75 @@ const Experience = () => {
       title: 'Coding Club Member & Dev Team Lead',
       organization: 'RVCE',
       date: 'Dec 2025 – Present',
-      description: 'Development Team Lead for CloneFest 2.0. Spearheading a 5-member technical team to build and maintain the event\'s digital infrastructure. Coordinating feature deployments, delegating technical tasks, and ensuring platform stability for an event targeting 180+ participants.',
-      icon: <Briefcase size={20} className="text-[#06b6d4]" />
+      description: 'Development Team Lead for CloneFest 2.0. Spearheaded a technical team to build and maintain the event\'s digital infrastructure, managed live platform deployments, and ensured system stability for over 180+ participants.',
+      icon: <Briefcase size={16} className="text-zinc-300" />
     },
     {
       id: 2,
-      type: 'hackathon',
-      title: 'PitchTrial (Multi-AI SharkTank)',
-      organization: 'Nebius x NovaHackathon',
+      type: 'leadership',
+      title: 'Core Organizing Team – Coding Club 10th Anniversary',
+      organization: 'Coding Club RVCE',
       date: 'Recent',
-      description: 'Built a working prototype of PitchTrial in 24 hours. Participated alongside talented teams to innovate using AI technologies.',
-      icon: <Trophy size={20} className="text-[#06b6d4]" />
+      description: 'Part of the core technical & event organizing team for the landmark 10th Decennial Anniversary celebration of RVCE Coding Club. Coordinated technical workshops, event logistics, digital platforms, and collaborative hack sessions engaging alumni and students.',
+      icon: <Users size={16} className="text-zinc-300" />
     },
     {
       id: 3,
-      type: 'hackathon',
-      title: 'Hackemon 2.0 & Team DHI Prompt Masters',
-      organization: 'RVCE',
+      type: 'project-lead',
+      title: 'Project Lead & Full-Stack Developer',
+      organization: 'Systems & Applied AI Projects',
       date: 'Recent',
-      description: 'Active participant in competitive events, solving complex problems and showcasing prompt engineering and development skills.',
-      icon: <Trophy size={20} className="text-[#06b6d4]" />
+      description: 'Led the design and end-to-end architecture for applied developer platforms including the AI Resume Analyser and IEEE Nexus registration portal. Architected backend automation, schema migrations, and role-based access control.',
+      icon: <Code size={16} className="text-zinc-300" />
     }
   ];
 
   return (
-    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
+        className="mb-10"
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-4">
-          <span className="text-[#06b6d4]">01.</span> Experience & Extracurriculars
-          <div className="h-[1px] bg-slate-700 flex-grow ml-4"></div>
+        <div className="flex items-center gap-3 mb-2">
+          <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">01 / TRACK RECORD</span>
+          <div className="h-px bg-white/[0.08] flex-grow max-w-xs"></div>
+        </div>
+        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-100">
+          Experience &amp; Leadership
         </h2>
       </motion.div>
 
-      <div className="relative border-l border-slate-700 ml-3 md:ml-6 space-y-12">
+      <div className="relative border-l border-white/[0.08] ml-3 md:ml-6 space-y-8">
         {experiences.map((exp, index) => (
           <motion.div 
             key={exp.id}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
             className="relative pl-8 md:pl-12"
           >
-            {/* Timeline Dot with Icon */}
-            <div className="absolute -left-4 md:-left-5 top-1 bg-slate-900 border border-[#06b6d4] p-2 rounded-full z-10">
+            {/* Minimalist Timeline Dot */}
+            <div className="absolute -left-3.5 md:-left-4 top-1.5 bg-[#0b0f17] border border-white/20 p-1.5 rounded-full z-10">
               {exp.icon}
             </div>
 
-            <div className="bg-slate-800/50 rounded-xl p-6 hover:bg-slate-800 transition-colors border border-slate-800 hover:border-slate-700">
-              <h3 className="text-xl font-bold text-slate-100">{exp.title}</h3>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mt-2 mb-4 text-sm text-[#06b6d4] font-medium">
-                <span>{exp.organization}</span>
-                <span className="hidden sm:inline text-slate-500">•</span>
-                <span className="flex items-center gap-1 text-slate-400">
-                  <Calendar size={14} /> {exp.date}
+            <div className="bg-[#121722]/90 backdrop-blur-sm rounded-xl p-6 border border-white/[0.08] hover:border-white/[0.16] transition-all duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                <h3 className="text-lg font-semibold text-zinc-100">{exp.title}</h3>
+                <span className="flex items-center gap-1.5 text-xs font-mono text-zinc-500">
+                  <Calendar size={13} /> {exp.date}
                 </span>
               </div>
-              <p className="text-slate-400 leading-relaxed">
+              
+              <div className="text-xs font-mono text-blue-400 font-medium mb-3">
+                {exp.organization}
+              </div>
+
+              <p className="text-zinc-400 text-sm leading-relaxed">
                 {exp.description}
               </p>
             </div>

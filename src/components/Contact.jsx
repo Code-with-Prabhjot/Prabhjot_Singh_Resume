@@ -1,46 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail } from 'lucide-react';
+import { Mail, ArrowUpRight, Copy, Check } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+  const email = 'prabhjotsingh.swe@gmail.com';
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full text-center">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 flex items-center justify-center gap-4">
-          <span className="text-[#06b6d4]">05.</span> What's Next?
+        <div className="inline-flex items-center gap-3 mb-3">
+          <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">05 / INITIATE CONTACT</span>
+        </div>
+        
+        <h2 className="text-3xl sm:text-5xl font-bold text-zinc-100 tracking-tight mb-4">
+          Let's build something remarkable.
         </h2>
         
-        <h3 className="text-4xl md:text-5xl font-extrabold text-slate-200 mb-6">
-          Get In Touch
-        </h3>
-        
-        <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Looking for exciting engineering opportunities or collaborations? Let's connect. My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        <p className="text-sm sm:text-base text-zinc-400 mb-10 max-w-xl mx-auto leading-relaxed">
+          Seeking challenging software engineering roles, high-throughput systems design, or AI engineering projects. My inbox is always open.
         </p>
         
-        <div className="flex flex-col items-center justify-center gap-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-12">
+          {/* Primary Mailto Link */}
           <a 
-            href="mailto:prabhjotsingh.swe@gmail.com" 
-            className="flex items-center gap-3 bg-transparent border-2 border-[#06b6d4] text-[#06b6d4] px-10 py-4 rounded-full font-bold hover:bg-[#06b6d4]/10 transition-colors w-full sm:w-auto justify-center text-lg shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.3)]"
+            href={`mailto:${email}`} 
+            className="w-full sm:w-auto bg-white text-zinc-950 hover:bg-zinc-200 transition font-medium px-6 py-2.5 rounded-lg text-sm inline-flex items-center justify-center gap-2 shadow-sm"
           >
-            <Mail size={22} />
-            Say Hello
+            <Mail size={16} />
+            <span>Send Email</span>
+            <ArrowUpRight size={14} className="text-zinc-600" />
           </a>
-          
-          <div className="flex items-center gap-6 mt-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
-            <a href="https://github.com/Code-with-Prabhjot" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#06b6d4] transition-colors" title="GitHub">
-              <FaGithub size={20} />
-            </a>
-            <a href="https://www.linkedin.com/in/prabhjot-singh-88a683366/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#06b6d4] transition-colors" title="LinkedIn">
-              <FaLinkedin size={20} />
-            </a>
-          </div>
+
+          {/* Copy Address Button */}
+          <button
+            onClick={handleCopy}
+            className="w-full sm:w-auto border border-white/[0.08] bg-[#121722]/80 hover:bg-white/[0.06] text-zinc-300 hover:text-white transition font-mono text-xs px-4 py-2.5 rounded-lg inline-flex items-center justify-center gap-2"
+          >
+            {copied ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} />}
+            <span>{copied ? 'Copied to Clipboard' : 'Copy Email Address'}</span>
+          </button>
+        </div>
+
+        {/* Social Row */}
+        <div className="flex items-center justify-center gap-4 text-xs font-mono text-zinc-500 pt-8 border-t border-white/[0.06]">
+          <a 
+            href="https://github.com/Code-with-Prabhjot" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors"
+          >
+            <FaGithub size={15} />
+            <span>GitHub</span>
+          </a>
+          <span>&bull;</span>
+          <a 
+            href="https://www.linkedin.com/in/prabhjot-singh-88a683366/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors"
+          >
+            <FaLinkedin size={15} />
+            <span>LinkedIn</span>
+          </a>
+          <span>&bull;</span>
+          <a 
+            href="https://leetcode.com/u/Code-with-Prabhjot/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors"
+          >
+            <span>LeetCode</span>
+          </a>
         </div>
       </motion.div>
     </section>

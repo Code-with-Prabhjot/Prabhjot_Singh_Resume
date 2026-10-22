@@ -10,14 +10,17 @@ import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   return (
-    <div className="bg-[#0f172a] text-[#f8fafc] min-h-screen selection:bg-[#06b6d4] selection:text-[#0f172a] relative">
+    <div className="bg-[#0b0f17] text-zinc-100 min-h-screen selection:bg-blue-500/20 selection:text-white relative">
       <ScrollProgress />
       
-      {/* Vercel-Style Engineering Grid Background */}
+      {/* Editorial High-Contrast Coordinate Grid Backdrop with Natural Depth */}
       <div 
-        className="fixed inset-0 z-0 pointer-events-none bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px]"
-        style={{ maskImage: 'radial-gradient(circle at center, black, transparent 80%)', WebkitMaskImage: 'radial-gradient(circle at center, black, transparent 80%)' }}
-      ></div>
+        className="fixed inset-0 z-0 pointer-events-none bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:48px_48px]"
+        style={{ 
+          maskImage: 'radial-gradient(ellipse 90% 65% at 50% 0%, black 45%, transparent 100%)', 
+          WebkitMaskImage: 'radial-gradient(ellipse 90% 65% at 50% 0%, black 45%, transparent 100%)' 
+        }}
+      />
 
       <div className="relative z-10">
         <Navbar />
@@ -31,10 +34,15 @@ function App() {
           <Contact />
         </main>
 
-        <footer className="py-8 border-t border-slate-800">
-          <p className="text-slate-500 text-xs sm:text-sm text-center font-medium tracking-wide">
-            Designed &amp; Developed by Prabhjot Singh &bull; &copy; 2026
-          </p>
+        <footer className="py-12 border-t border-white/[0.08] bg-[#0b0f17]/90 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
+            <p>
+              Prabhjot Singh &bull; Software Engineer
+            </p>
+            <p>
+              Engineered with depth &amp; high-contrast precision &bull; &copy; 2026
+            </p>
+          </div>
         </footer>
       </div>
     </div>
