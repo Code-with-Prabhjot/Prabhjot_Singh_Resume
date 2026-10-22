@@ -237,7 +237,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/[0.08] bg-[#121722]/80 text-xs font-mono text-zinc-400 mb-6 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/[0.12] bg-[#161f30] text-xs font-mono text-zinc-400 mb-6 backdrop-blur-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)]"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -297,7 +297,7 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="GitHub Profile"
-                className="border border-white/[0.08] bg-[#121722]/80 hover:bg-white/[0.06] text-zinc-300 hover:text-white transition-all p-2.5 rounded-lg"
+                className="border border-white/[0.12] bg-[#161f30] hover:bg-[#1c273c] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] text-zinc-300 hover:text-white transition-all p-2.5 rounded-lg"
               >
                 <FaGithub size={18} />
               </a>
@@ -306,7 +306,7 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="LinkedIn Profile"
-                className="border border-white/[0.08] bg-[#121722]/80 hover:bg-white/[0.06] text-zinc-300 hover:text-white transition-all p-2.5 rounded-lg"
+                className="border border-white/[0.12] bg-[#161f30] hover:bg-[#1c273c] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] text-zinc-300 hover:text-white transition-all p-2.5 rounded-lg"
               >
                 <FaLinkedin size={18} />
               </a>
@@ -316,7 +316,7 @@ const Hero = () => {
                 rel="noopener noreferrer" 
                 aria-label="LeetCode Profile"
                 title="LeetCode Profile"
-                className="border border-white/[0.08] bg-[#121722]/80 hover:bg-white/[0.06] text-zinc-300 hover:text-white transition-all p-2.5 rounded-lg"
+                className="border border-white/[0.12] bg-[#161f30] hover:bg-[#1c273c] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] text-zinc-300 hover:text-white transition-all p-2.5 rounded-lg"
               >
                 <Code2 size={18} />
               </a>
@@ -333,10 +333,10 @@ const Hero = () => {
           className="relative flex-shrink-0"
         >
           {/* Card Container with deep slate background, subtle border and sleek inner shadow */}
-          <div className="relative w-56 sm:w-64 md:w-72 aspect-[3/4] rounded-2xl p-1 bg-gradient-to-b from-white/[0.12] via-white/[0.04] to-transparent border border-white/[0.08] shadow-2xl group overflow-hidden">
+          <div className="relative w-56 sm:w-64 md:w-72 aspect-[3/4] rounded-2xl p-1 bg-[#161f30] border border-white/[0.12] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] group overflow-hidden">
             
             {/* Sleek Inner Container */}
-            <div className="relative w-full h-full rounded-xl overflow-hidden bg-[#121722]">
+            <div className="relative w-full h-full rounded-xl overflow-hidden bg-[#161f30]">
               <img 
                 src="/PRABHJOT.png" 
                 alt="Prabhjot Singh" 
@@ -344,12 +344,12 @@ const Hero = () => {
               />
               
               {/* Subtle Gradient Vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f17]/90 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0f1623]/80 via-transparent to-transparent pointer-events-none" />
 
-              {/* Clean Location & Dev Role Status Tag (B.E. CSE removed to eliminate redundancy) */}
-              <div className="absolute bottom-3 left-3 right-3 py-1.5 px-3 rounded-lg bg-[#0b0f17]/90 backdrop-blur-md border border-white/[0.08] flex items-center justify-center gap-2 text-[11px] font-mono text-zinc-300 pointer-events-none">
+              {/* Clean Location Tag */}
+              <div className="absolute bottom-3 left-3 right-3 py-1.5 px-3 rounded-lg bg-[#161f30]/90 backdrop-blur-md border border-white/[0.12] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 text-[11px] font-mono text-zinc-300 pointer-events-none">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                <span>Available for Dev Roles &bull; Bengaluru, IN</span>
+                <span>Bengaluru, India</span>
               </div>
             </div>
 

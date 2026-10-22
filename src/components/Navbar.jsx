@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-[#0b0f17]/80 border-b border-white/[0.08] ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-[#0f1623]/80 border-b border-white/[0.08] ${
         scrolled ? 'py-3' : 'py-4'
       }`}
     >
@@ -86,7 +86,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden border-t border-white/[0.08] bg-[#0b0f17]/95 backdrop-blur-xl"
+            className="md:hidden border-t border-white/[0.08] bg-[#0f1623]/95 backdrop-blur-xl"
           >
             <div className="px-4 py-3 space-y-1">
               {navLinks.map((link) => (

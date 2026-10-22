@@ -58,7 +58,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="rounded-xl border border-white/[0.08] bg-[#121722]/90 backdrop-blur-sm p-6 sm:p-7 flex flex-col justify-between hover:border-white/[0.16] transition-all duration-300 group"
+            className="rounded-xl border border-white/[0.12] bg-[#161f30] hover:bg-[#1c273c] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] backdrop-blur-sm p-6 sm:p-7 flex flex-col justify-between hover:border-white/[0.2] transition-all duration-300 group"
           >
             <div>
               {/* Card Header */}
@@ -79,7 +79,7 @@ const Projects = () => {
                         href={project.github} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="p-2 rounded-lg border border-white/[0.08] bg-white/5 hover:bg-white/10 text-zinc-400 hover:text-white transition-colors" 
+                        className="p-2 rounded-lg border border-white/[0.12] bg-white/5 hover:bg-white/10 text-zinc-400 hover:text-white transition-colors" 
                         aria-label="Repository Source"
                         title="GitHub Repository"
                       >
@@ -89,7 +89,7 @@ const Projects = () => {
                         href={project.live} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="p-2 rounded-lg border border-white/[0.08] bg-white/5 hover:bg-white/10 text-zinc-400 hover:text-white transition-colors" 
+                        className="p-2 rounded-lg border border-white/[0.12] bg-white/5 hover:bg-white/10 text-zinc-400 hover:text-white transition-colors" 
                         aria-label="Live Deployment"
                         title="Live Deployment"
                       >

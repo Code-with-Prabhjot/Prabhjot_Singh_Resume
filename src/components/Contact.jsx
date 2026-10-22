@@ -47,7 +47,7 @@ const Contact = () => {
           {/* Copy Address Button */}
           <button
             onClick={handleCopy}
-            className="w-full sm:w-auto border border-white/[0.08] bg-[#121722]/80 hover:bg-white/[0.06] text-zinc-300 hover:text-white transition font-mono text-xs px-4 py-2.5 rounded-lg inline-flex items-center justify-center gap-2"
+            className="w-full sm:w-auto border border-white/[0.12] bg-[#161f30] hover:bg-[#1c273c] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] text-zinc-300 hover:text-white transition font-mono text-xs px-4 py-2.5 rounded-lg inline-flex items-center justify-center gap-2"
           >
             {copied ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} />}
             <span>{copied ? 'Copied to Clipboard' : 'Copy Email Address'}</span>

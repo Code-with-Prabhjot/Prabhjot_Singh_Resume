@@ -9,17 +9,17 @@ const Experience = () => {
       type: 'club',
       title: 'Coding Club Member & Dev Team Lead',
       organization: 'RVCE',
-      date: 'Dec 2025 – Present',
-      description: 'Development Team Lead for CloneFest 2.0. Spearheaded a technical team to build and maintain the event\'s digital infrastructure, managed live platform deployments, and ensured system stability for over 180+ participants.',
+      date: 'Dec 2025 – Oct 2026 (Completed)',
+      description: "Development Team Lead for CloneFest 2.0. Spearheaded a 5-member technical team to build and maintain the event's digital infrastructure, managed live platform deployments, and maintained 100% platform stability throughout the event for 180+ participants.",
       icon: <Briefcase size={16} className="text-zinc-300" />
     },
     {
       id: 2,
       type: 'leadership',
-      title: 'Core Organizing Team – Coding Club 10th Anniversary',
+      title: 'Core Technical & Organizing Team – 10th Anniversary',
       organization: 'Coding Club RVCE',
-      date: 'Recent',
-      description: 'Part of the core technical & event organizing team for the landmark 10th Decennial Anniversary celebration of RVCE Coding Club. Coordinated technical workshops, event logistics, digital platforms, and collaborative hack sessions engaging alumni and students.',
+      date: 'Oct 27–29, 2026 (Upcoming)',
+      description: "Serving on the core technical and organizing committee for RVCE Coding Club's landmark decennial anniversary (Oct 27–29). Architecting event digital infrastructure, coordinating competitive programming tracks, and managing technical operations.",
       icon: <Users size={16} className="text-zinc-300" />
     },
     {
@@ -62,11 +62,11 @@ const Experience = () => {
             className="relative pl-8 md:pl-12"
           >
             {/* Minimalist Timeline Dot */}
-            <div className="absolute -left-3.5 md:-left-4 top-1.5 bg-[#0b0f17] border border-white/20 p-1.5 rounded-full z-10">
+            <div className="absolute -left-3.5 md:-left-4 top-1.5 bg-[#0f1623] border border-white/20 p-1.5 rounded-full z-10">
               {exp.icon}
             </div>
 
-            <div className="bg-[#121722]/90 backdrop-blur-sm rounded-xl p-6 border border-white/[0.08] hover:border-white/[0.16] transition-all duration-300">
+            <div className="bg-[#161f30] hover:bg-[#1c273c] backdrop-blur-sm rounded-xl p-6 border border-white/[0.12] hover:border-white/[0.2] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] transition-all duration-300">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
                 <h3 className="text-lg font-semibold text-zinc-100">{exp.title}</h3>
                 <span className="flex items-center gap-1.5 text-xs font-mono text-zinc-500">

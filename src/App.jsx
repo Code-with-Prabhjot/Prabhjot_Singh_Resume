@@ -10,9 +10,12 @@ import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   return (
-    <div className="bg-[#0b0f17] text-zinc-100 min-h-screen selection:bg-blue-500/20 selection:text-white relative">
+    <div className="bg-[#0f1623] text-zinc-100 min-h-screen selection:bg-blue-500/20 selection:text-white relative">
       <ScrollProgress />
       
+      {/* Subtle ambient radial gradient at the top of the page */}
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none z-0 bg-radial from-blue-500/[0.07] via-transparent to-transparent" />
+
       {/* Editorial High-Contrast Coordinate Grid Backdrop with Natural Depth */}
       <div 
         className="fixed inset-0 z-0 pointer-events-none bg-[linear-gradient(to_right,rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:48px_48px]"
@@ -34,13 +37,13 @@ function App() {
           <Contact />
         </main>
 
-        <footer className="py-12 border-t border-white/[0.08] bg-[#0b0f17]/90 backdrop-blur-sm">
+        <footer className="py-12 border-t border-white/[0.08] bg-[#0f1623]/90 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
             <p>
               Prabhjot Singh &bull; Software Engineer
             </p>
             <p>
-              Engineered with depth &amp; high-contrast precision &bull; &copy; 2026
+              Built with React, Three.js &amp; Tailwind CSS &bull; &copy; 2026
             </p>
           </div>
         </footer>
