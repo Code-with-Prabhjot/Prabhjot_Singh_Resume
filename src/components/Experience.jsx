@@ -18,8 +18,8 @@ const Experience = () => {
       type: 'leadership',
       title: 'Core Technical & Organizing Team – 10th Anniversary',
       organization: 'Coding Club RVCE',
-      date: 'Oct 27–29, 2026 (Upcoming)',
-      description: "Serving on the core technical and organizing committee for RVCE Coding Club's landmark decennial anniversary (Oct 27–29). Architecting event digital infrastructure, coordinating competitive programming tracks, and managing technical operations.",
+      date: 'Oct 2026 (Upcoming)',
+      description: "Serving on the core technical and organizing committee for RVCE Coding Club's landmark decennial anniversary. Architecting event digital infrastructure, coordinating competitive programming tracks, and managing technical operations.",
       icon: <Users size={16} className="text-zinc-300" />
     },
     {
