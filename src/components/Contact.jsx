@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, ArrowUpRight, Copy, Check } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef(null);
   const email = 'prabhjotsingh.swe@gmail.com';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+    timerRef.current = setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   };
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full text-center">
@@ -47,10 +61,10 @@ const Contact = () => {
           {/* Copy Address Button */}
           <button
             onClick={handleCopy}
-            className="w-full sm:w-auto border border-white/[0.12] bg-[#161f30] hover:bg-[#1c273c] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] text-zinc-300 hover:text-white transition font-mono text-xs px-4 py-2.5 rounded-lg inline-flex items-center justify-center gap-2"
+            className="w-full sm:w-auto border border-white/[0.12] bg-[#161f30] hover:bg-[#1c273c] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] text-zinc-300 hover:text-white transition font-mono text-xs px-4 py-2.5 rounded-lg inline-flex items-center justify-center gap-2 cursor-pointer"
           >
             {copied ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} />}
-            <span>{copied ? 'Copied to Clipboard' : 'Copy Email Address'}</span>
+            <span>{copied ? 'Copied to Clipboard!' : 'Copy Email Address'}</span>
           </button>
         </div>
 

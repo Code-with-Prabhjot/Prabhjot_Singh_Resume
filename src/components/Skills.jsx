@@ -52,7 +52,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.08 }}
-            className="rounded-xl border border-white/[0.12] bg-[#161f30] hover:bg-[#1c273c] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] backdrop-blur-sm p-6 hover:border-white/[0.2] transition-all duration-300"
+            className="rounded-xl border border-white/[0.12] bg-[#161f30] hover:bg-[#1c273c] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] backdrop-blur-sm p-6 hover:border-white/[0.2] transition-all duration-300 flex flex-col h-full"
           >
             <div className="flex items-center gap-2.5 mb-5 pb-3 border-b border-white/[0.06]">
               <div className="p-1.5 rounded-md bg-white/5 border border-white/[0.08]">
@@ -63,14 +63,19 @@ const Skills = () => {
               </h3>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 flex-grow">
               {group.items.map((item) => (
-                <span
+                <motion.div
                   key={item}
-                  className="px-3 py-1.5 bg-white/[0.03] text-zinc-300 rounded-lg border border-white/[0.08] text-xs font-mono transition-colors hover:border-white/[0.16] hover:text-white hover:bg-white/5 cursor-default"
+                  drag
+                  dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                  dragElastic={0.6}
+                  whileDrag={{ scale: 1.1, cursor: "grabbing" }}
+                  whileHover={{ scale: 1.05 }}
+                  className="px-3 py-1.5 bg-white/[0.03] text-zinc-300 rounded-lg border border-white/[0.08] text-xs font-mono transition-colors hover:border-white/[0.16] hover:text-white hover:bg-white/5 cursor-grab select-none"
                 >
                   {item}
-                </span>
+                </motion.div>
               ))}
             </div>
           </motion.div>
